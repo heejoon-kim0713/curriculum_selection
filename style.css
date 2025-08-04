@@ -111,3 +111,38 @@ button:active {
     border-radius: 5px;
     display: inline-block;
 }
+
+/* 공유하기 섹션 스타일 */
+.share-section {
+    margin-top: 40px;
+    border-top: 1px solid #eee;
+    padding-top: 20px;
+}
+
+.share-title {
+    font-size: 1em;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.share-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.share-buttons button {
+    width: auto;
+    flex: 1;
+    max-width: 150px;
+    padding: 12px 20px;
+}
+
+.share-kakao { background-color: #FEE500; color: #191919; }
+.share-link { background-color: #555; color: white; }
+
+.restart-btn {
+    background-color: #6c757d;
+    color: white;
+    margin-top: 30px;
+}
