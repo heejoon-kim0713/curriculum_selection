@@ -1,44 +1,35 @@
-// --- 질문 목록 ---
+// --- 질문 목록 (7개 버전) ---
 const questions = {
     it: [
         { text: "수학 문제처럼, 정해진 규칙에 따라 답을 딱! 찾아내는 걸 좋아하나요?", courses: ["java", "c"] },
-        { text: "많은 사람들이 쓰는 어플을 내 손으로 직접 만들어보고 싶나요?", courses: ["java"] },
+        { text: "많은 사람들이 쓰는 어플을 내 손으로 직접 만들어보고 싶나요?", courses: ["java", "python"] },
         { text: "게임에서 우리 팀 기지를 지키거나, 상대방의 허점을 파고드는 전략을 짜는 걸 좋아하나요?", courses: ["security"] },
-        { text: "틀린 그림 찾기처럼, 남들이 못 보는 단서를 찾아내는 데 자신 있나요?", courses: ["security"] },
-        { text: "용돈 기입장처럼 데이터를 깔끔하게 정리하는 걸 좋아하나요?", courses: ["python", "dba"] },
-        { text: "반복되는 귀찮은 일은 자동으로 처리해 주는 프로그램을 만들고 싶나요?", courses: ["python"] },
+        { text: "용돈 기입장처럼 데이터를 깔끔하게 정리하고, 필요할 때 바로 꺼내 쓰는 걸 잘하나요?", courses: ["python", "dba"] },
         { text: "인기 게임이 출시됐을 때 서버가 터지지 않게 관리하는 역할에 관심이 있나요?", courses: ["aws"] },
         { text: "컴퓨터의 가장 깊은 속까지 원리를 파고드는 것에 흥미를 느끼나요?", courses: ["c"] },
-        { text: "기업의 가장 중요한 보물인 '데이터'를 지키고 관리하는 사람이 되고 싶나요?", courses: ["dba"] },
         { text: "코딩을 하나도 몰라도, 내 아이디어를 멋진 앱으로 바로 만들어보고 싶나요?", courses: ["nocode"] }
     ],
     game: [
         { text: "그림으로만 보던 캐릭터를, 입체적인 인형(모델)으로 만들어보고 싶나요?", courses: ["modeling3d"] },
-        { text: "레고나 프라모델처럼, 여러 부품을 합쳐서 멋진 결과물을 만드는 걸 좋아하나요?", courses: ["modeling3d"] },
         { text: "내가 상상한 멋진 캐릭터와 환상적인 배경을 직접 그려서 게임의 얼굴로 만들고 싶나요?", courses: ["art"] },
-        { text: "컴퓨터와 타블렛으로 그림 그리는 '디지털 드로잉'을 제대로 배워보고 싶나요?", courses: ["art", "design"] },
         { text: "요즘 유행하는 모바일 게임이나 나만의 인디 게임을 만들어보고 싶나요?", courses: ["unity"] },
-        { text: "AR(증강현실) 게임을 내 손으로 만들어보고 싶다는 생각을 해봤나요?", courses: ["unity"] },
         { text: "영화처럼 그래픽이 엄청나게 좋은 PC 게임을 만들어보고 싶나요?", courses: ["unreal"] },
-        { text: "코드를 한 줄도 안 쓰고, 블록을 조립하듯 게임의 기능을 만들어보고 싶나요?", courses: ["unreal"] },
         { text: "게임을 만드는 것보다, 어떤 게임이 재미있을지 규칙이나 스토리를 짜는 게 더 좋으세요?", courses: ["planning"] },
-        { text: "친구들과 힘을 합쳐 멋진 게임을 완성시키는 '조장' 역할을 하고 싶나요?", courses: ["planning"] }
+        { text: "코드를 한 줄도 안 쓰고, 블록을 조립하듯 게임의 기능을 만들어보고 싶나요?", courses: ["unreal"] },
+        { text: "게임을 만들 때 꼭 필요한 '그림 실력'의 기본기를 탄탄하게 다지고 싶나요?", courses: ["design"] }
     ],
     video: [
         { text: "밋밋한 글씨를 번쩍이게 하거나, 화면에 없던 번개를 '콰쾅!' 하고 나타나게 만들고 싶나요?", courses: ["aftereffect", "motion"] },
-        { text: "TV 광고나 아이돌 뮤직비디오처럼, 짧지만 눈을 사로잡는 화려한 영상을 만들고 싶나요?", courses: ["aftereffect", "motion"] },
-        { text: "여행 영상을 모아 한 편의 멋진 브이로그로 만들고 싶나요?", courses: ["premiere", "youtube"] },
-        { text: "지루한 부분을 잘라내고, 신나는 음악을 넣어 영상의 재미를 2배로 만들고 싶나요?", courses: ["premiere"] },
+        { text: "흩어져 있는 영상 조각들을 모아 한 편의 감동적인 스토리로 만들고 싶나요?", courses: ["premiere", "youtube"] },
         { text: "마블 영화처럼, CG와 실제 영상을 감쪽같이 합쳐서 한 장면처럼 만들고 싶나요?", courses: ["vfx", "nuke"] },
-        { text: "현실에서는 촬영할 수 없는 장면을 컴퓨터 그래픽으로 만들고 싶나요?", courses: ["vfx", "maya_modeling"] },
-        { text: "겨울왕국의 '엘사' 같은 3D 캐릭터를 내 손으로 직접 만들고 싶나요?", courses: ["maya_modeling", "maya_anim"] },
+        { text: "겨울왕국의 '엘사' 같은 3D 캐릭터를 내 손으로 직접 만들고 싶나요?", courses:["maya_modeling"]},
         { text: "내가 만든 3D 캐릭터가 걷고, 뛰고, 말하게 만들어서 살아있는 것처럼 만들고 싶나요?", courses: ["maya_anim"] },
         { text: "나만의 채널을 만들어 세상과 소통하는 '유튜버'가 되고 싶나요?", courses: ["youtube"] },
-        { text: "유튜브 영상에 들어가는 썸네일이나 자막을 센스 있게 디자인하고 싶나요?", courses: ["design", "youtube"] }
+        { text: "영상에 필요한 이미지 소스를 직접 그리거나 디자인해서 쓰고 싶나요?", courses: ["design"] }
     ]
 };
 
-// --- 결과 데이터 ---
+// --- 결과 데이터 (수정 없음) ---
 const resultsData = {
     // IT
     java: { title: "논리적인 백엔드 개발자", description: "당신은 복잡한 문제도 논리적으로 차근차근 해결하는 것을 즐기는군요! 안정적이고 수요 많은 자바 개발자로서의 재능이 보입니다.", course: "자바 개발자 과정 (국기)" },
@@ -66,7 +57,7 @@ const resultsData = {
     motion: { title: "움직임에 감각을 더하는 모션그래픽 전문가", description: "화려한 효과와 감각적인 3D 디자인을 결합하여 사람들의 시선을 사로잡는 영상을 만들고 싶어 하는군요. 당신은 트렌드를 이끄는 아티스트가 될 수 있습니다.", course: "모션그래픽 취업보장반" }
 };
 
-// --- 설문 로직 (이 아래는 수정하지 않아도 됩니다) ---
+// --- 설문 로직 (수정 없음) ---
 let currentQuestions = [];
 let currentQuestionIndex = 0;
 let scores = {};
@@ -80,9 +71,8 @@ const progressBar = document.getElementById('progress');
 function startSurvey(category) {
     currentQuestions = questions[category];
     currentQuestionIndex = 0;
-    scores = {}; // 점수 초기화
+    scores = {}; 
     
-    // 해당 카테고리의 모든 과정 점수를 0으로 설정
     currentQuestions.forEach(q => {
         q.courses.forEach(course => {
             scores[course] = 0;
@@ -123,7 +113,7 @@ function showResult() {
     questionScreen.classList.remove('active');
     resultScreen.classList.add('active');
 
-    let maxScore = 0; // '아니오'만 선택한 경우를 위해 0으로 시작
+    let maxScore = 0; 
     let resultKey = '';
 
     for (const course in scores) {
