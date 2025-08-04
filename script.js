@@ -1,3 +1,7 @@
+// --- 카카오 SDK 초기화 ---
+// 1단계에서 복사한 JavaScript 키를 아래에 붙여넣으세요.
+Kakao.init('f2632e2ee38bab065e09e7b2ba5bc473');
+
 // --- 질문 목록 (7개 버전) ---
 const questions = {
     it: [
@@ -29,9 +33,9 @@ const questions = {
     ]
 };
 
-// --- 결과 데이터 (수정 없음) ---
+// --- 결과 데이터 ---
 const resultsData = {
-    // IT
+    // ... (이전과 동일하므로 생략, 실제 파일에는 전체 내용이 있어야 합니다)
     java: { title: "논리적인 백엔드 개발자", description: "당신은 복잡한 문제도 논리적으로 차근차근 해결하는 것을 즐기는군요! 안정적이고 수요 많은 자바 개발자로서의 재능이 보입니다.", course: "자바 개발자 과정 (국기)" },
     security: { title: "시스템을 지키는 보안 전문가", description: "남들이 보지 못하는 허점을 찾아내고, 방어 전략을 세우는 당신! 정보보안 엔지니어의 자질을 갖추셨네요.", course: "보안 엔지니어 과정 (국기)" },
     python: { title: "데이터를 다루는 효율적인 해결사", description: "데이터를 분석하고 반복적인 일을 자동화하는 것에 흥미를 느끼는군요. 쉽고 강력한 파이썬이 당신에게 날개를 달아줄 거예요.", course: "파이썬 금융 솔루션 (KDT)" },
@@ -39,28 +43,27 @@ const resultsData = {
     c: { title: "컴퓨터의 근본을 탐구하는 개발자", description: "겉모습보다 컴퓨터의 깊은 원리를 이해하고 싶어 하는 당신! C언어는 당신을 진짜 실력자로 만들어 줄 튼튼한 기초가 될 것입니다.", course: "C언어 (KDC)" },
     dba: { title: "데이터를 지키는 데이터베이스 관리자", description: "정보를 체계적으로 정리하고 안전하게 지키는 것에 책임감을 느끼는군요. 기업의 핵심 자산인 데이터를 다루는 DBA가 되어보세요.", course: "DBA (KDC)" },
     nocode: { title: "아이디어를 빠르게 구현하는 기획자", description: "복잡한 코딩보다 번뜩이는 아이디어를 빠르게 현실로 만드는 것을 즐기는 당신! 노코드 툴은 당신의 가장 강력한 무기가 될 거예요.", course: "노코드/버블 (일반)" },
-    // 게임
     modeling3d: { title: "생명을 불어넣는 3D 모델러", description: "평면의 그림을 입체적인 현실로 만드는 것에 큰 매력을 느끼는군요! 당신의 손에서 멋진 게임 캐릭터와 배경이 탄생할 거예요.", course: "게임 3D 모델링" },
     art: { title: "게임의 비주얼을 책임지는 원화가", description: "당신의 머릿속에 있는 환상적인 세계와 캐릭터를 그림으로 표현하고 싶어 하는군요. 게임의 첫인상을 결정하는 매력적인 아티스트가 될 수 있어요.", course: "게임 원화" },
     unity: { title: "상상력을 빠르게 실현하는 유니티 개발자", description: "아이디어만 있다면 어떤 게임이든 빠르게 만들어보고 싶어 하는 당신! 유니티 엔진으로 당신의 상상력을 마음껏 펼쳐보세요.", course: "유니티" },
     unreal: { title: "최고의 그래픽을 구현하는 언리얼 개발자", description: "영화처럼 화려하고 사실적인 그래픽에 대한 로망이 있군요! 언리얼 엔진은 당신의 꿈을 현실로 만들어 줄 강력한 도구입니다.", course: "언리얼" },
     planning: { title: "재미의 본질을 설계하는 게임 기획자", description: "게임을 직접 만드는 것보다 '어떻게 만들어야 재미있을까?'를 고민하는 것을 즐기는군요. 당신은 프로젝트를 이끄는 리더의 자질을 갖췄습니다.", course: "게임기획" },
-    // 영상
     aftereffect: { title: "시선을 사로잡는 모션그래픽 디자이너", description: "정적인 이미지에 움직임을 불어넣어 사람들의 시선을 사로잡는 것에 희열을 느끼는군요. 당신의 감각이 담긴 영상은 모두를 놀라게 할 거예요.", course: "애프터이펙트" },
     premiere: { title: "스토리텔링의 마술사, 영상 편집자", description: "흩어져 있는 영상 조각들을 모아 하나의 감동적인 스토리로 만드는 재능이 있군요. 당신의 손끝에서 영상의 리듬과 호흡이 결정됩니다.", course: "프리미어 프로" },
     vfx: { title: "현실과 상상의 경계를 허무는 VFX 아티스트", description: "현실에선 불가능한 장면을 스크린 속에 구현해내는 일에 매력을 느끼는군요. 당신은 영상에 마법을 더하는 기술자입니다.", course: "VFX / Nuke 합성" },
     maya_modeling: { title: "정교한 3D 세계를 창조하는 마야 모델러", description: "실사에 가까운 정교하고 사실적인 3D 모델을 만드는 것에 흥미를 느끼는군요. 영화 속 캐릭터와 배경이 당신의 손에서 태어납니다.", course: "maya 모델링" },
     maya_anim: { title: "3D 모델에 영혼을 불어넣는 애니메이터", description: "멈춰있는 모델에 움직임을 주어 살아있는 캐릭터로 만드는 일에 큰 기쁨을 느끼는군요. 당신은 관객을 웃고 울게 만들 수 있습니다.", course: "maya 애니메이션" },
     youtube: { title: "세상과 소통하는 1인 크리에이터", description: "나만의 콘텐츠로 세상과 소통하고, 사람들에게 영향력을 주는 것에 매력을 느끼는군요. 지금 바로 당신의 채널을 시작해보세요!", course: "유튜브" },
-    // 공통
     design: { title: "모든 디자인의 기초, 비주얼 디자이너", description: "그림을 그리거나 무언가를 시각적으로 꾸미는 것에 기본적인 재능과 흥미가 있군요! 디자인은 게임과 영상 모든 분야의 가장 중요한 기초가 됩니다.", course: "공통디자인(포토샵/일러스트)" },
     motion: { title: "움직임에 감각을 더하는 모션그래픽 전문가", description: "화려한 효과와 감각적인 3D 디자인을 결합하여 사람들의 시선을 사로잡는 영상을 만들고 싶어 하는군요. 당신은 트렌드를 이끄는 아티스트가 될 수 있습니다.", course: "모션그래픽 취업보장반" }
 };
 
-// --- 설문 로직 (수정 없음) ---
+
+// --- 설문 로직 ---
 let currentQuestions = [];
 let currentQuestionIndex = 0;
 let scores = {};
+let lastResultKey = ''; // 공유하기 기능을 위해 마지막 결과 키를 저장
 
 const startScreen = document.getElementById('start-screen');
 const questionScreen = document.getElementById('question-screen');
@@ -71,7 +74,8 @@ const progressBar = document.getElementById('progress');
 function startSurvey(category) {
     currentQuestions = questions[category];
     currentQuestionIndex = 0;
-    scores = {}; 
+    scores = {};
+    lastResultKey = '';
     
     currentQuestions.forEach(q => {
         q.courses.forEach(course => {
@@ -99,9 +103,7 @@ function answer(choice) {
             }
         });
     }
-
     currentQuestionIndex++;
-
     if (currentQuestionIndex < currentQuestions.length) {
         showQuestion();
     } else {
@@ -113,7 +115,7 @@ function showResult() {
     questionScreen.classList.remove('active');
     resultScreen.classList.add('active');
 
-    let maxScore = 0; 
+    let maxScore = 0;
     let resultKey = '';
 
     for (const course in scores) {
@@ -122,6 +124,8 @@ function showResult() {
             resultKey = course;
         }
     }
+
+    lastResultKey = resultKey; // 마지막 결과를 변수에 저장
 
     if (maxScore === 0) {
         document.getElementById('result-title').innerText = "아직 당신의 흥미를 발견하지 못했어요!";
@@ -138,4 +142,30 @@ function showResult() {
 function restart() {
     resultScreen.classList.remove('active');
     startScreen.classList.add('active');
+}
+
+// --- 공유 기능 함수들 ---
+function shareToKakao() {
+    if (!lastResultKey) {
+        alert('테스트 결과가 없습니다.');
+        return;
+    }
+
+    const result = resultsData[lastResultKey];
+    
+    Kakao.Share.sendCustom({
+        templateId: 123118, // 1단계에서 복사한 '템플릿 ID'를 여기에 숫자만 입력하세요.
+        templateArgs: {
+            'title': result.title,
+            'description': result.description
+        }
+    });
+}
+
+function copyLink() {
+    navigator.clipboard.writeText(window.location.href).then(() => {
+        alert('링크가 복사되었어요! 친구에게 공유해보세요.');
+    }).catch(err => {
+        alert('링크 복사에 실패했어요. 다시 시도해주세요.');
+    });
 }
