@@ -4,7 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>나의 적성 테스트</title>
-    <link rel="stylesheet" href="style.css">
+    <meta property="og:title" content="나의 커리어 잠재력 테스트"/>
+    <meta property="og:description" content="나에게 꼭 맞는 IT/게임/영상 과정은? 지금 바로 알아보세요!"/>
+    <meta property="og:image" content="https://i.imgur.com/example.png"/> <link rel="stylesheet" href="style.css">
+    <script src="https://t1.kakaocdn.net/kakao_js_sdk/2.7.2/kakao.min.js"
+            integrity="sha384-TiCUE00h649CAMonG018J2ujOgDKW/kVWlChEuu4jK2vxfAAD0eZxzCKakxg55G4" crossorigin="anonymous"></script>
 </head>
 <body>
 
@@ -35,7 +39,16 @@
             <h1 id="result-title">결과 타이틀</h1>
             <p id="result-description">결과 설명이 여기에 표시됩니다.</p>
             <p id="result-courses">추천 과정: </p>
-            <button onclick="restart()">처음으로 돌아가기</button>
+            
+            <div class="share-section">
+                <p class="share-title">친구에게 결과 공유하기</p>
+                <div class="share-buttons">
+                    <button class="share-kakao" onclick="shareToKakao()">카카오톡</button>
+                    <button class="share-link" onclick="copyLink()">링크복사</button>
+                </div>
+            </div>
+            
+            <button class="restart-btn" onclick="restart()">처음으로 돌아가기</button>
         </div>
     </div>
 
