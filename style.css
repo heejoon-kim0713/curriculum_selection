@@ -112,9 +112,24 @@ button:active {
     display: inline-block;
 }
 
+/* ★★★ 상담 신청 버튼 스타일이 추가되었습니다. ★★★ */
+.consult-link {
+    text-decoration: none;
+    display: inline-block;
+    width: 100%;
+    max-width: 280px;
+    margin-top: 15px;
+}
+
+.consult-btn {
+    background-color: #28a745; /* 눈에 띄는 초록색 */
+    color: white;
+    width: 100%;
+}
+
 /* 공유하기 섹션 스타일 */
 .share-section {
-    margin-top: 40px;
+    margin-top: 30px;
     border-top: 1px solid #eee;
     padding-top: 20px;
 }
